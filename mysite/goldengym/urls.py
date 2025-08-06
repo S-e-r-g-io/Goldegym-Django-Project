@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path
 from home.views import home_view, contact_view
 from website.views import cliente_detail_view, cliente_create_view
+from gym.views import sala_view
 
 urlpatterns = [
+    path('sala/', sala_view),
     path('admin/', admin.site.urls),
     path('contact/', contact_view),
     path('', home_view, name='home'),

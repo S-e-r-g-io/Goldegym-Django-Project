@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Golden Gym </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-warning text-center py-3">
+        <h1>
+            <a href="#" class="text-dark text-decoration-none">
+                Golden Gym
+            </a>
+        </h1>
+    </header>
+
+    <main class="container-fluid my-4">
+        <div class="row">
+
+            <div class="col-md-3 bg-warning p-2">
+                <form method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Nome</label>
+                        <input class="form-control" type="text" name="Nome" value="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tema</label>
+                        <input class="form-control" type="text" name="Tema" value="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Dimensione (mq)</label>
+                        <input class="form-control" type="text" name="mq" value="">
+                    </div>
+
+                    <!-- <input class="filtro-button" type="submit" value="invia"> -->
+                    <button class="btn btn-dark" type="submit">Invia</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-warning">
+                            <tr>
+                                <th>nome</th>
+                                <th>tema</th>
+                                <th>mq</th>
+                            </tr>
+                        </thead>
+
+                        <tr $classRiga>
+                            <td>{$riga['nome']}</td>
+                            <td>{$riga['tema']}</td>
+                            <td>{$riga['mq']}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <nav>
+                    <ul class="nav flex-column bg-dark">
+                        <li class="nav-item">
+                            <h4><a class="nav-link text-white text-decoration-none"
+                                href="cliente.php">Clienti</a></h4></li>
+                        <li class="nav-item">
+                            <h4><a class="nav-link text-white text-decoration-none"
+                                href="abbonamento.php">Abbonamenti</a></h4></li>
+                        <li class="nav-item">
+                            <h4><a class="nav-link text-white text-decoration-none"
+                                href="sala.php">Sale</a></h4></li>
+                        <li class="nav-item">
+                            <h4><a class="nav-link text-white text-decoration-none"
+                                href="prenotazioneCliente.php">Cerca prenotazioni per cliente</a></h4></li>
+                        <li class="nav-item">
+                            <h4><a class="nav-link text-white text-decoration-none"
+                                href="prenotazioneSala.php">Cerca prenotazioni per sala</a></h4></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer class="bg-dark text-white text-end p-2">
+        Golden Gym srl - Via dei Tricipiti 4, Bergamo
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
